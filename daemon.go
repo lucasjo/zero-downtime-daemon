@@ -172,7 +172,7 @@ func setuid(u string, g string) (err error) {
 		}
 		break
 	}
-
+	log.Printf("uid : %v, gid: %v\n", uid, gid)
 	if uid < 0 {
 		uid, err = strconv.Atoi(u)
 		if err != nil {
